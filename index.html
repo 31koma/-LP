@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>グルコースマンラビリンス｜天空ラビリンス</title>
+  <title>グルコースマンラビリンス｜天空島の巨大迷宮</title>
   <meta name="description" content="空に浮かぶグルコースマンシティ。その中心に開いた大縦穴を下り、深度7,000mの彼方へ。答えは、落ちた先に。">
   <meta name="theme-color" content="#1E2F5E">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
-  <meta property="og:title" content="グルコースマンラビリンス｜世界はずっと逆だった。">
+  <meta property="og:title" content="グルコースマンラビリンス｜天空島の巨大迷宮">
   <meta property="og:description" content="この穴の底に、何がある？ 深度7,000mを目指す落下アスレチック。">
   <meta property="og:url" content="https://example.com/glucoseman-labyrinth/">
   <meta property="og:image" content="https://example.com/glucoseman-labyrinth/ogp.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="グルコースマンラビリンス">
+  <meta name="twitter:title" content="グルコースマンラビリンス｜天空島の巨大迷宮">
   <meta name="twitter:description" content="世界はずっと逆だった。この穴の底に、何がある？">
   <meta name="twitter:image" content="https://example.com/glucoseman-labyrinth/ogp.jpg">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='36' r='24' fill='%238A5CA8'/%3E%3Cellipse cx='25' cy='34' rx='3' ry='7' fill='%23191919'/%3E%3Cellipse cx='39' cy='34' rx='3' ry='7' fill='%23191919'/%3E%3Cpath d='M31 14C25 5 17 7 18 14c1 5 8 7 13 3C35 7 44 7 45 14c1 7-8 9-14 3z' fill='%237ED957'/%3E%3Crect x='27' y='43' width='10' height='6' rx='1' fill='%23C22D28'/%3E%3C/svg%3E">
@@ -423,6 +423,111 @@
     }
     .intro-lines strong { color: var(--yellow); }
 
+    .parts-section {
+      position: relative;
+      padding: clamp(90px, 14vw, 160px) 0;
+      overflow: hidden;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 82% 20%, rgba(126,217,87,.34), transparent 26%),
+        linear-gradient(135deg, #fff5b9 0%, #f5d74e 52%, #d7ed7a 100%);
+    }
+    .parts-section::before {
+      content: "07";
+      position: absolute;
+      right: -2vw;
+      bottom: -8vw;
+      color: rgba(25,25,25,.055);
+      font-size: clamp(12rem, 35vw, 31rem);
+      font-weight: 950;
+      line-height: .75;
+      letter-spacing: -.12em;
+    }
+    .parts-grid {
+      position: relative;
+      display: grid;
+      gap: clamp(3rem, 8vw, 7rem);
+      align-items: center;
+    }
+    .parts-copy .eyebrow { color: var(--green); }
+    .parts-copy h2 {
+      max-width: 12ch;
+      margin: 0 0 1.5rem;
+      font-size: clamp(2.7rem, 10vw, 6.4rem);
+      line-height: .98;
+      letter-spacing: -.075em;
+      text-wrap: balance;
+    }
+    .parts-copy h2 span {
+      display: inline-block;
+      color: var(--purple);
+    }
+    .parts-copy p {
+      max-width: 42rem;
+      margin: 0 0 1rem;
+      font-size: clamp(.96rem, 2.7vw, 1.12rem);
+      font-weight: 750;
+      line-height: 1.9;
+    }
+    .parts-copy p:last-child { margin-bottom: 0; }
+    .parts-copy strong { color: var(--green); font-weight: 950; }
+
+    .parts-visual {
+      position: relative;
+      width: min(100%, 500px);
+      margin-inline: auto;
+      padding: clamp(1.25rem, 4vw, 2.25rem);
+      border: 3px solid var(--ink);
+      border-radius: 24px;
+      background: rgba(255,255,255,.46);
+      box-shadow: 12px 12px 0 var(--ink), 0 25px 60px rgba(25,25,25,.18);
+    }
+    .parts-status {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      padding-bottom: .8rem;
+      border-bottom: 2px solid var(--ink);
+      font-size: .7rem;
+      font-weight: 950;
+      letter-spacing: .16em;
+    }
+    .parts-status::after { content: "MISSION"; color: var(--green); }
+    .parts-number {
+      margin: -.05em 0 -.12em;
+      color: var(--purple);
+      font-size: clamp(10rem, 40vw, 19rem);
+      font-weight: 950;
+      line-height: 1;
+      letter-spacing: -.12em;
+      text-align: center;
+      text-shadow: 6px 6px 0 #fff, 10px 10px 0 var(--ink);
+    }
+    .parts-track {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: clamp(5px, 1.5vw, 10px);
+      margin-top: .55rem;
+    }
+    .parts-track span {
+      display: block;
+      aspect-ratio: 1;
+      border: 2px solid var(--ink);
+      background: var(--yellow);
+      box-shadow: 3px 3px 0 var(--ink);
+      transform: rotate(calc((var(--piece) - 4) * 5deg));
+    }
+    .parts-track span:nth-child(2n) { border-radius: 50%; background: var(--lime); }
+    .parts-track span:nth-child(3n) { clip-path: polygon(50% 0, 100% 35%, 82% 100%, 18% 100%, 0 35%); background: #fff; }
+    .parts-lock {
+      margin: 1.2rem 0 0;
+      color: var(--green);
+      font-size: .68rem;
+      font-weight: 950;
+      letter-spacing: .14em;
+      text-align: center;
+    }
+
     .depth-section {
       --sink: 0;
       position: relative;
@@ -780,6 +885,33 @@
       background: var(--green);
       transform: rotate(45deg);
     }
+    .official-site-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .7rem;
+      margin-top: 1.35rem;
+      padding: .78rem 1rem;
+      color: var(--ink);
+      border: 2px solid var(--ink);
+      border-radius: 11px;
+      background: rgba(255,255,255,.86);
+      box-shadow: 4px 4px 0 var(--ink);
+      font-size: .86rem;
+      font-weight: 950;
+      text-decoration: none;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .official-site-link::after {
+      content: "↗";
+      font-size: 1.05rem;
+      line-height: 1;
+    }
+    .official-site-link:hover {
+      background: #fff;
+      box-shadow: 6px 6px 0 var(--purple);
+      transform: translate(-2px, -2px);
+    }
+    .official-site-link:focus-visible { outline: 4px solid var(--purple); outline-offset: 4px; }
 
     .conquest-section {
       position: relative;
@@ -931,6 +1063,7 @@
       .profile { grid-template-columns: 6.8rem 1fr; }
       .profile dt, .profile dd { padding: .76rem 1rem; }
       .conquest-grid { grid-template-columns: minmax(0, .78fr) minmax(380px, 1.22fr); }
+      .parts-grid { grid-template-columns: minmax(0, 1.08fr) minmax(330px, .92fr); }
     }
 
     @media (min-width: 980px) {
@@ -1009,7 +1142,7 @@
 
       <div class="shell hero-grid">
         <div class="hero-copy">
-          <p class="game-title"><span>ROBLOX GAME</span>グルコースマンラビリンス<br>— 天空ラビリンス —</p>
+          <p class="game-title"><span>ROBLOX GAME</span>グルコースマンラビリンス<br>天空島の巨大迷宮</p>
           <h1 id="hero-title">世界はずっと<span class="accent">逆</span>だった。</h1>
           <p class="hero-sub">この穴の底に、何がある？</p>
           <p class="hero-note">空に浮かぶ街から、深度7,000mの彼方へ。<br>見えるのは、ほんの入り口だけ。</p>
@@ -1034,6 +1167,29 @@
           落ちても、また街から始められる。<br>
           だからキミは、<strong>もう一度だけ</strong>進みたくなる。
         </p>
+      </div>
+    </section>
+
+    <section class="parts-section" aria-labelledby="parts-title">
+      <div class="shell parts-grid">
+        <div class="parts-copy reveal">
+          <p class="eyebrow">MAIN MISSION</p>
+          <h2 id="parts-title">散らばった<span>7つのパーツ</span>を集めろ</h2>
+          <p>グルコースマンラビリンスの各地には、グルコースマンのパーツが7つ隠されている。</p>
+          <p>街を走り回る者を追いかけ、巨大な穴を滑り、飛び、謎の最深部を目指せ。</p>
+          <p>簡単に見つかるパーツもあれば、特殊なアクションや隠されたルートを突破しなければ手に入らないパーツもある。</p>
+          <p><strong>7つすべて集めた者だけが、</strong>ラビリンスの最後に待つ特別な場所へたどり着ける。</p>
+        </div>
+
+        <div class="parts-visual reveal" aria-label="集めるパーツは全部で7つ">
+          <p class="parts-status">PARTS / 7</p>
+          <div class="parts-number" aria-hidden="true">7</div>
+          <div class="parts-track" aria-hidden="true">
+            <span style="--piece:1"></span><span style="--piece:2"></span><span style="--piece:3"></span>
+            <span style="--piece:4"></span><span style="--piece:5"></span><span style="--piece:6"></span><span style="--piece:7"></span>
+          </div>
+          <p class="parts-lock">ALL PARTS REQUIRED TO UNLOCK THE END</p>
+        </div>
       </div>
     </section>
 
@@ -1081,9 +1237,9 @@
             <p>ジャンプで前宙返り。2段ジャンプで横スピン。落ちるほど、動くのが楽しくなる。</p>
           </article>
           <article class="feature-card reveal" data-no="03">
-            <div class="card-icon" aria-hidden="true">?</div>
-            <h3>何かを集めている人がいる？</h3>
-            <p>街では、そんなウワサも聞こえてくる。何なのかは、まだわからない。</p>
+            <div class="card-icon" aria-hidden="true">7</div>
+            <h3>散らばった7つのパーツ</h3>
+            <p>簡単には見つからない。特殊なアクションと隠されたルートを突破して集めよう。</p>
           </article>
           <article class="feature-card reveal" data-no="04">
             <div class="card-icon" aria-hidden="true">◇</div>
@@ -1116,6 +1272,7 @@
             <dt>好物</dt><dd>パンケーキ</dd>
           </dl>
           <p class="speech">「よーし、エネルギー届けるぞ！」</p>
+          <a class="official-site-link" href="https://glucoseman.net/" target="_blank" rel="noopener noreferrer">グルコースマン公式HPへ</a>
         </div>
       </div>
     </section>
